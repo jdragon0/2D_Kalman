@@ -12,3 +12,5 @@ xy평면에서 Random하게 움직이는 물체를 추적하는 모델을 설계
 
 
 ![image](https://github.com/user-attachments/assets/fe38ddfb-9ea9-4dd7-96db-48b3aa07585a)
+x : 추정 데이터
+o : 실제 물체 위치
