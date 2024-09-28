@@ -2,10 +2,51 @@
 xy평면에서 Random하게 움직이는 물체를 추적하는 모델을 설계하고 칼만필터로 Tracing하는 예제.
 
 ## 시스템 설계
-![image](https://github.com/user-attachments/assets/ab55cadf-87c2-4c66-8f76-9490861e2c53)
+```math
 
-![image](https://github.com/user-attachments/assets/7c05e5c1-9d9f-41f6-adf8-548a9b592cbb)
-
+\begin{align}
+X_k = AX_{k-1}+w\\
+X_k=
+\begin{bmatrix}
+    x_k & y_k \\ \dot{x_k}&\dot{y_k} \\ \ddot{x_k}& \ddot{y_k}
+\end{bmatrix}=
+\begin{bmatrix}
+    1 & \Delta t & \Delta t^2\over2 \\ 0 & 1 & \Delta t \\ 0 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+    x_{k-1} & y_{k-1} \\ \dot{x_{k-1}}&\dot{y_{k-1}} \\ \ddot{x_{k-1}}& \ddot{y_{k-1}}
+\end{bmatrix}
+\\이므로\\
+A = 
+\begin{bmatrix}
+    1 & \Delta t & \Delta t^2\over2 \newline 0 & 1 & \Delta t \newline 0 & 0 & 0
+\end{bmatrix}\\
+이고\\
+\\
+\\
+z_k=Hx_k+v \\
+z_k=\begin{bmatrix}
+    1&0&0
+\end{bmatrix}
+\begin{bmatrix}
+    x_k & y_k \newline \dot{x_k} & \dot{y_k} \newline \ddot{x_k} & \ddot{y_k}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x_k & y_k
+\end{bmatrix}
+\\이므로
+\\
+H=\begin{bmatrix}
+    1&0&0
+\end{bmatrix}
+\\이다
+\\
+\\
+\\
+\\
+\end{align}
+```
 
 
 # 결과
