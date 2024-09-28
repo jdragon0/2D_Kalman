@@ -6,7 +6,7 @@ x = np.array([0,1,2,4,7,7,6,7,8,9,10,9,6,4])
 y = np.array([0,2,5,7,6,4,2,0,1,3,4,3,2,2])
 t = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13])
 
-num = 50
+num = 1000
 
 tt = np.linspace(0,t[-1],num)
 dt = tt[1] - tt[0]
@@ -22,8 +22,8 @@ A = np.matrix([[1,dt,dt*dt/2],[0,1,dt],[0,0,1]])
 H = np.matrix([1,0,0])
 P = np.eye(A.shape[0])
 
-R = 0.1
-Q = np.eye(3)*0.1 
+R = 10 # measurement noise covariance
+Q = np.eye(3) * 0.05
 
 initx = np.matrix([[0, 0],[0, 0],[0.1, 0.1]])
 xh = initx
@@ -33,12 +33,12 @@ yyy = np.zeros(num)
 ex = np.zeros(num)
 ey = np.zeros(num)
 for k in range(num):
-    w = np.matrix(np.random.randn(3,2))* 0.1
+    w = np.matrix(np.random.randn(3,2))* 0.0001
     xh = A@xh + w
     Pp = A@P@A.transpose()+Q
     K = Pp@H.transpose()@np.linalg.inv(H@Pp@H.transpose()+R)
 
-    v = np.matrix(np.random.randn(1,2)) *0.1
+    v = np.matrix(np.random.randn(1,2)) * 0.6
     z = np.matrix([xx[k],yy[k]]) + v
 
     xh = xh+K@(z-H@xh)
@@ -50,8 +50,8 @@ for k in range(num):
     ex[k] = z.item(0)
     ey[k] = z.item(1)
 
-plt.plot(xx,yy)
-plt.plot(ex,ey,'o')
-plt.plot(xxx,yyy,'x')
+plt.plot(ex,ey,'o',color='darkorange')
+plt.plot(xxx,yyy,'x',color='g')
+plt.plot(xx,yy,linestyle='dashed',color='k',linewidth=3)
 plt.grid()
 plt.show()
