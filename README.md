@@ -51,11 +51,11 @@ Q와 R은 실험적으로 만들어서 계산해 보았다.
 
 # 결과
 
-![image](https://github.com/user-attachments/assets/40bd24fe-e059-4024-b021-7abd44e1cbdd)
+![image](https://github.com/user-attachments/assets/cac4e3f8-c90e-46c9-8bf4-4f9011e81d98)
 
+
+o : 관측 물체 위치
 
 x : 추정 된 물체 위치
 
-o : 실제 물체 위치
-
-실선 : 실제 물체 이동 경로
+점선 : 실제 물체 이동 경로
