@@ -16,12 +16,14 @@ X_k=
 \begin{bmatrix}
     x_{k-1} & y_{k-1} \\ \dot{x_{k-1}}&\dot{y_{k-1}} \\ \ddot{x_{k-1}}& \ddot{y_{k-1}}
 \end{bmatrix}
-\\이므로\\
+\\
+
+\\
 A = 
 \begin{bmatrix}
     1 & \Delta t & \Delta t^2\over2 \newline 0 & 1 & \Delta t \newline 0 & 0 & 0
 \end{bmatrix}\\
-이고\\
+\\
 \\
 \\
 z_k=Hx_k+v \\
@@ -35,12 +37,14 @@ z_k=\begin{bmatrix}
 \begin{bmatrix}
     x_k & y_k
 \end{bmatrix}
-\\이므로
+\\
+
+
 \\
 H=\begin{bmatrix}
     1&0&0
 \end{bmatrix}
-\\이다
+\\
 \\
 \\
 \\
