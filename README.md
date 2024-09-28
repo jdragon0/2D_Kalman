@@ -13,13 +13,13 @@ xy평면에서 움직이는 물체를 인식하기위해 위치와 속도와 가
 X_k = AX_{k-1}+w\\
 X_k=
 \begin{bmatrix}
-    x_k & y_k \\ \dot{x_k}&\dot{y_k} \\ \ddot{x_k}& \ddot{y_k}
+    x_k & y_k \\ \dot{x}_k&\dot{y}_k \\ \ddot{x}_k& \ddot{y}_k
 \end{bmatrix}=
 \begin{bmatrix}
     1 & \Delta t & \Delta t^2\over2 \\ 0 & 1 & \Delta t \\ 0 & 0 & 0
 \end{bmatrix}
 \begin{bmatrix}
-    x_{k-1} & y_{k-1} \\ \dot{x_{k-1}}&\dot{y_{k-1}} \\ \ddot{x_{k-1}}& \ddot{y_{k-1}}
+    x_{k-1} & y_{k-1} \\ \dot{x}_{k-1}&\dot{y}_{k-1} \\ \ddot{x}_{k-1}& \ddot{y}_{k-1}
 \end{bmatrix}
 \\
 
@@ -36,7 +36,7 @@ z_k=\begin{bmatrix}
     1&0&0
 \end{bmatrix}
 \begin{bmatrix}
-    x_k & y_k \newline \dot{x_k} & \dot{y_k} \newline \ddot{x_k} & \ddot{y_k}
+    x_k & y_k \newline \dot{x}_k & \dot{y}_k \newline \ddot{x}_k & \ddot{y}_k
 \end{bmatrix}
 =
 \begin{bmatrix}
