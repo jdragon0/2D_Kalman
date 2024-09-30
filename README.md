@@ -64,7 +64,7 @@ Q = \begin{bmatrix}
 q(Q)와 R은 실험적으로 적당한 값을 선택했다.
 
 ## 결과
-### 같은 경로를 움직이는 물체를 각각 다른 samplerate로 포착한 경우를 시뮬레이션함
+### 같은 경로를 움직이는 물체를 각각 다른 samplerate로 관찰하며 각각 Kalman filter를 적용해 시뮬레이션함
 
 ### N = 100
 ![image](https://github.com/user-attachments/assets/b06b9a73-51b3-4701-9879-4f9257a4a060)
