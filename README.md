@@ -52,6 +52,11 @@ H=\begin{bmatrix}
 \\
 \\
 \\
+Q = \begin{bmatrix}
+    dt^4\over4 & dt^3\over2 & dt^2\over2 \\
+    dt^4\over4 & dt^3\over2 & dt^2\over2 \\
+    dt^4\over4 & dt^3\over2 & dt^2\over2 \\
+\end{bmatrix}
 \\
 \\
 \end{align}
@@ -59,8 +64,17 @@ H=\begin{bmatrix}
 Q와 R은 실험적으로 적당한 값을 선택했다.
 
 ## 결과
+### 같은 경로를 움직이는 물체를 각각 다른 samplerate로 포착한 경우를 시뮬레이션함
 
-![image](https://github.com/user-attachments/assets/cac4e3f8-c90e-46c9-8bf4-4f9011e81d98)
+### N = 100
+![image](https://github.com/user-attachments/assets/b06b9a73-51b3-4701-9879-4f9257a4a060)
+
+### N = 500
+![image](https://github.com/user-attachments/assets/330399d5-504c-426c-a5fd-9a6f2834a23c)
+
+### N = 1000
+![image](https://github.com/user-attachments/assets/23ca5cc7-cb04-4d3e-8935-8ca5b2c363c7)
+
 
 
 o : 관측 물체 위치
